@@ -10,12 +10,13 @@ sys.path.append("..")
 from KicadModTree import *
 from KicadFootprintCommon import *
 
-PITCH           = inch_to_mm(.1)
-PAD_SIZE        = 1.75
-DRILL_SIZE      = .7
-TEXT_OFFSET	= .12
-HEIGHT 		= 38 * PITCH
-WIDTH 		= PAD_SIZE + 4
+PITCH           	= inch_to_mm(.1)
+PAD_SIZE        	= 1.75
+DRILL_SIZE_FRONT	= .7
+DRILL_SIZE_BACK      	= 1
+TEXT_OFFSET		= .12
+HEIGHT 			= 38 * PITCH
+WIDTH 			= PAD_SIZE + 4
 
 def create_wire_pads (name, is_left, is_front):
 
@@ -45,12 +46,13 @@ def create_wire_pads (name, is_left, is_front):
 	
 	letter = 'A' if is_left else 'B'
 	x = inch_to_mm(-TEXT_OFFSET if is_left else TEXT_OFFSET)
+	drill_size = DRILL_SIZE_FRONT if is_front else DRILL_SIZE_BACK
     	for i in range(0, 38):
 		y = top + i * PITCH
 		add_circular_tht_pad(
 			module, str(38 - i), 
 			0, y,
-			PAD_SIZE, DRILL_SIZE);
+			PAD_SIZE, drill_size);
 		module.append(Text(
 			type = "user", 
 			text = str(38 - i) + letter, 
