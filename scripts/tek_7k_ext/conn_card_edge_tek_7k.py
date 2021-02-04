@@ -13,7 +13,7 @@ from KicadFootprintCommon import *
 NAME 		= "Connector_Card_Edge_Tek_7k"
 PITCH 		= inch_to_mm(.1)
 PAD_SIZE 	= [1.75, 1.75]
-DRILL_SIZE 	= [inch_to_mm(.018 + .006), inch_to_mm(.03 + .006)]
+DRILL_SIZE 	= [.94, .94]
 HEIGHT 		= inch_to_mm(4.06)
 WIDTH 		= inch_to_mm(.37)
 

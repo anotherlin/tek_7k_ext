@@ -12,7 +12,7 @@ from KicadFootprintCommon import *
 
 PITCH           	= inch_to_mm(.1)
 PAD_SIZE        	= 1.75
-DRILL_SIZE_FRONT	= .7
+DRILL_SIZE_FRONT	= .8
 DRILL_SIZE_BACK      	= 1
 TEXT_OFFSET		= .12
 HEIGHT 			= 38 * PITCH
