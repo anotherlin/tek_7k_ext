@@ -99,6 +99,13 @@ for the cables.
 
 ## Revision history and status
 
+* **_Version 1.3_** Drill sizes made larger again.
+  - Prototype for backplate of version 1.2 fabricated, card edge connector still doesn't fit on PCB! 
+  - Actually, the oval drills for the card edge connector were not done properly by fab (JLCPCB). 
+    This was difficult to see without good magnification (microscope) so it has gone unnoticed.
+    So now use regular circular pads instead of oval ones, this should be easier for PCB fabs.
+  - Enlarged drill size again for ribbon cables on backplate, this should made soldering easier.
+
 * **_Version 1.2_** README.md added, probing pads enlarged.
   - Probing pads modified to have larger drill size (1mm) so standard 2.54mm pin headers can be fitted;
   - Still no prototypes made, no validation yet.
